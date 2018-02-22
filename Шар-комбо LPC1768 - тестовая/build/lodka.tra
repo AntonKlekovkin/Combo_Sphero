@@ -1,0 +1,36 @@
+*** Creating Trace Output File '.\build\lodka.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\build\combo_sph.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\build\combo_sph.o" 
+--strict --scatter "mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/LPC1768.sct" 
+
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/board.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/cmsis_nvic.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/retarget.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/startup_LPC17xx.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/sys.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/system_LPC17xx.o
+            
+              mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/mbed.ar
+            
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\build\lodka.map" -o .\build\lodka.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\build\lodka.axf'
+### ADS-LD Command File: '.\build\lodka.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\build\lodka.lnp', Handle=0x000003B0
+### Writing '.lnp' file
+### ADS-LD Command file '.\build\lodka.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
