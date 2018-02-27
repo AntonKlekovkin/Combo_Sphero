@@ -149,7 +149,7 @@ void obrabotka_bufera(void)
             else if(buffer[0]==160)  //Set coefficients of feedback
             {							
 							//Wheel.Pid.k_theta = buffer[1]*10;
-							Wheel.Pid.dzeta = (float)(buffer[1])/100;
+							Wheel.Pid.dzeta = (float)(buffer[1])/10;
 							Rotor.Pid.k_phi = buffer[2]*100;
 							Wheel.Pid.linear_speed = buffer[3]*1;
 							//wait_ms(2000);
