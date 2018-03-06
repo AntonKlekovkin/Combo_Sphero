@@ -18,7 +18,7 @@ class My_pid
 		float out_torque_wheel; 				// output wheel torque for article feedback
 		float	out_torque_rotor;					// output rotor torque for article feedback
 		float linear_speed;
-		float dzeta;
+		float dzeta_wheel, dzeta_rotor;
 		
 		//constructor of the class
 //		My_pid(float kp_set, float kd_set, float ki_set)
@@ -55,7 +55,8 @@ class My_pid
 			k_theta=40;
 			k_phi=0;
 			linear_speed=2;
-			dzeta=0.3;
+			dzeta_wheel=2;
+			dzeta_rotor=1;
 			
 			set_min_max(-50,50);
 		}
@@ -113,7 +114,12 @@ class My_pid
 		{
 			int K_max = 1000;
 			
-			out_torque_wheel=(2*K_max/3.1415926)*atan( (-dot_theta + linear_speed)*dzeta) ;
+			if(dzeta_wheel==0)
+			{
+				return setted_value;
+			}			
+			
+			out_torque_wheel=(2*K_max/3.1415926)*atan( (-dot_theta + linear_speed)*dzeta_wheel) ;
 								
 			//out_torque_wheel = k_theta*( -dot_theta) + linear_speed;
 			return out_torque_wheel;		
@@ -122,9 +128,12 @@ class My_pid
 		
 		float Calculate_feedback_rotor(float dot_theta, float dot_phi, float w2, float w3)
 		{
-			//w2=0;
-			dot_theta=0;
-			out_torque_rotor=k_phi*( w2 - dot_theta + w3 - 0.1*dot_phi);
+			
+			int K_max = 1000;			
+			
+			//out_torque_rotor=k_phi*( w2 + w3 - 1*dot_phi);
+			
+			out_torque_rotor = (2*K_max/3.1415926)*atan( (w2 + w3 - 1*dot_phi)*dzeta_rotor) ;
 				
 			return out_torque_rotor;		
 		

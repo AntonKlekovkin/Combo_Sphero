@@ -154,10 +154,10 @@ int main()
 				mpu9250.CalculateGyroData();
 				Wheel.Pid.setted_value=Wheel.Pid.Calculate_feedback(-mpu9250.gz);
 				
-				uart.printf("%f\r\n", mpu9250.gz);
+				//uart.printf("%f\r\n", mpu9250.gz);
 				
 				Rotor.Pid.setted_value = Rotor.Pid.Calculate_feedback_rotor(Wheel.omega, Rotor.omega, mpu9250.gx, mpu9250.gy);
-				//uart.printf("%f %f\r\n", Wheel.Pid.setted_value, Rotor.Pid.setted_value);
+				uart.printf("%f %f\r\n", Wheel.Pid.setted_value, Rotor.Pid.setted_value);
 			}
 			
 				

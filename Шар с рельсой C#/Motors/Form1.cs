@@ -884,11 +884,11 @@ namespace Motors
         private void button13_Click(object sender, EventArgs e)
         {
             byte k_theta, k_phi, linear_speed;
-
+            
             try
             {
                 k_theta = Convert.ToByte(double.Parse(textBox23.Text) * 10);
-                k_phi = Convert.ToByte(double.Parse(textBox24.Text) / 100);
+                k_phi = Convert.ToByte(double.Parse(textBox24.Text) * 10);
                 linear_speed = Convert.ToByte(double.Parse(textBox25.Text) / 1);
             }
             catch

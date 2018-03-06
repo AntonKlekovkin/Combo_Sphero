@@ -68,5 +68,4 @@ void IR_Enc_A1()
      if ((B==0)&&(A==1)) {Rotor.pulse_enc++;}
      
      //uart.printf("%d\r\n", Rotor.pulse_enc);
- } 
- 
+ }

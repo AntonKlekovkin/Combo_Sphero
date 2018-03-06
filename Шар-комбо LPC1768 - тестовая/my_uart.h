@@ -85,27 +85,27 @@ void obrabotka_bufera(void)
               
                 if(buffer[5]==1)   //forward
                 {
-                  
-										if(Wheel.Pid.setted_value !=0)
-										{
-											Wheel.flag_start=1;
-										}
-										else
-										{
-											SysTickStop();
-											//Debug_Printf();
-											Wheel.Stop();
-											Wheel.Pid.Reset_on_zero();
-										}
-										
-										if(Rotor.Pid.setted_value !=0)
-										{
-											Rotor.flag_start=1;
-										}
-										else
-										{
-											Rotor.Stop();
-										}
+                  Wheel.flag_start=1;
+//										if(Wheel.Pid.setted_value !=0)
+//										{
+//											Wheel.flag_start=1;
+//										}
+//										else
+//										{
+//											SysTickStop();
+//											//Debug_Printf();
+//											Wheel.Stop();
+//											Wheel.Pid.Reset_on_zero();
+//										}
+//										
+//										if(Rotor.Pid.setted_value !=0)
+//										{
+//											Rotor.flag_start=1;
+//										}
+//										else
+//										{
+//											Rotor.Stop();
+//										}
 										
 										myled4=1;
                     
@@ -149,17 +149,18 @@ void obrabotka_bufera(void)
             else if(buffer[0]==160)  //Set coefficients of feedback
             {							
 							//Wheel.Pid.k_theta = buffer[1]*10;
-							Wheel.Pid.dzeta = (float)(buffer[1])/10;
-							Rotor.Pid.k_phi = buffer[2]*100;
+							Wheel.Pid.dzeta_wheel = (float)(buffer[1])/10;
+							Rotor.Pid.dzeta_rotor = (float)(buffer[2])/10;
 							Wheel.Pid.linear_speed = buffer[3]*1;
 							//wait_ms(2000);
 							uart.printf("Set OK\r\n");
 							//uart.printf("k_theta=%f, k_phi=%f, linear_speed=%f\r\n",Wheel.Pid.k_theta, Rotor.Pid.k_phi, Wheel.Pid.linear_speed);
-							uart.printf("dzeta=%f, k_phi=%f, linear_speed=%f\r\n",Wheel.Pid.dzeta, Rotor.Pid.k_phi, Wheel.Pid.linear_speed);
+							uart.printf("dzeta_wheel=%f, dzeta_rotor=%f, linear_speed=%f\r\n",Wheel.Pid.dzeta_wheel, Rotor.Pid.dzeta_rotor, Wheel.Pid.linear_speed);
 						}
 						else if(buffer[0]==161)  //Transmit feedback coefficients
             {							
-							uart.printf("k_theta=%f, k_phi=%f, linear_speed=%f\r\n",Wheel.Pid.k_theta, Rotor.Pid.k_phi, Wheel.Pid.linear_speed);
+							//uart.printf("k_theta=%f, k_phi=%f, linear_speed=%f\r\n",Wheel.Pid.k_theta, Rotor.Pid.k_phi, Wheel.Pid.linear_speed);
+							uart.printf("dzeta_wheel=%f, dzeta_rotor=%f, linear_speed=%f\r\n",Wheel.Pid.dzeta_wheel, Rotor.Pid.dzeta_rotor, Wheel.Pid.linear_speed);
 							myled3=!myled3;
 						}
 						

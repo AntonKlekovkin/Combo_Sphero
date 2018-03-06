@@ -589,7 +589,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(54, 20);
             this.textBox5.TabIndex = 24;
-            this.textBox5.Text = "100";
+            this.textBox5.Text = "0";
             // 
             // label19
             // 
@@ -631,7 +631,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(54, 20);
             this.textBox4.TabIndex = 19;
-            this.textBox4.Text = "100";
+            this.textBox4.Text = "1000";
             // 
             // button6
             // 
@@ -796,7 +796,7 @@
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(100, 20);
             this.textBox23.TabIndex = 35;
-            this.textBox23.Text = "0.1";
+            this.textBox23.Text = "2.0";
             // 
             // textBox24
             // 
@@ -804,7 +804,7 @@
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(100, 20);
             this.textBox24.TabIndex = 36;
-            this.textBox24.Text = "0";
+            this.textBox24.Text = "1.0";
             // 
             // label23
             // 
@@ -820,9 +820,9 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(917, 287);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(33, 13);
+            this.label24.Size = new System.Drawing.Size(53, 13);
             this.label24.TabIndex = 37;
-            this.label24.Text = "k_phi";
+            this.label24.Text = "dzeta_phi";
             // 
             // button13
             // 
