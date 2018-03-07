@@ -62,7 +62,8 @@ void InitMPU(Serial uart)
    {
 			uart.printf("Could not connect to MPU9250: \n\r");
 			uart.printf("%#x \n",  whoami);
-	 			 
+	 		return;
+		 
 			while(1) ; // Loop forever if communication doesn't happen
    }
 		

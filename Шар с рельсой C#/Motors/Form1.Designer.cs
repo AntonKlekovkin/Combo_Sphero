@@ -107,6 +107,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -804,7 +805,7 @@
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(100, 20);
             this.textBox24.TabIndex = 36;
-            this.textBox24.Text = "1.0";
+            this.textBox24.Text = "0.1";
             // 
             // label23
             // 
@@ -861,11 +862,22 @@
             this.label25.TabIndex = 41;
             this.label25.Text = "linear_speed";
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(823, 375);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 42;
+            this.button15.Text = "InitMPU";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 717);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.textBox25);
             this.Controls.Add(this.button14);
@@ -987,6 +999,7 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button15;
     }
 }
 

@@ -22,6 +22,8 @@ extern DigitalOut myled1(LED1);
 extern DigitalOut myled3(LED3);
 extern DigitalOut myled4(LED4);
 
+extern MPU9250 mpu9250;
+
 void SysTickStop()
 {
 	SysTick->VAL   = 0UL;  
@@ -150,7 +152,7 @@ void obrabotka_bufera(void)
             {							
 							//Wheel.Pid.k_theta = buffer[1]*10;
 							Wheel.Pid.dzeta_wheel = (float)(buffer[1])/10;
-							Rotor.Pid.dzeta_rotor = (float)(buffer[2])/10;
+							Rotor.Pid.dzeta_rotor = (float)(buffer[2])/100;
 							Wheel.Pid.linear_speed = buffer[3]*1;
 							//wait_ms(2000);
 							uart.printf("Set OK\r\n");
@@ -162,6 +164,10 @@ void obrabotka_bufera(void)
 							//uart.printf("k_theta=%f, k_phi=%f, linear_speed=%f\r\n",Wheel.Pid.k_theta, Rotor.Pid.k_phi, Wheel.Pid.linear_speed);
 							uart.printf("dzeta_wheel=%f, dzeta_rotor=%f, linear_speed=%f\r\n",Wheel.Pid.dzeta_wheel, Rotor.Pid.dzeta_rotor, Wheel.Pid.linear_speed);
 							myled3=!myled3;
+						}
+						else if(buffer[0]==170)  //Transmit feedback coefficients
+            {							
+							mpu9250.InitMPU(&uart);
 						}
 						
             //clear bufer

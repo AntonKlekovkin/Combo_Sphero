@@ -163,22 +163,6 @@
           <ExecCommand></ExecCommand>
           <Expression>V_zero1</Expression>
         </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>74</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1268</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\РђРЅС‚РѕРЅ\РџСЂРѕРµРєС‚С‹\РЁР°СЂ СЃ СЂРµР»СЊСЃРѕР№\РЁР°СЂ-РєРѕРјР±Рѕ LPC1768 - С‚РµСЃС‚РѕРІР°СЏ\my_uart.h</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\lodka\my_uart.h\74</Expression>
-        </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
@@ -189,32 +173,17 @@
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Wheel</ItemText>
+          <ItemText>debug_buffer</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Rotor</ItemText>
+          <ItemText>debug_buffer2</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>A</ItemText>
-        </Ww>
-        <Ww>
-          <count>4</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>B</ItemText>
-        </Ww>
-        <Ww>
-          <count>5</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>buffer,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>6</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Wheel.Pid.setted_value</ItemText>
+          <ItemText>Rotor.Pid.setted_value</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

@@ -28,12 +28,15 @@ Project File Date:  02/21/2018
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'mbed NXP LPC1768'
 compiling mpu_functions.cpp...
+mpu_functions.cpp(67): warning:  #128-D: loop is not reachable
+  			while(1) ; // Loop forever if communication doesn't happen
+mpu_functions.cpp: 1 warning, 0 errors
 compiling Combo_sph.cpp...
 compiling MPU9250.cpp...
 linking...
-Program Size: Code=44424 RO-data=3072 RW-data=268 ZI-data=3368  
+Program Size: Code=45112 RO-data=3224 RW-data=268 ZI-data=3368  
 After Build - User command #1: fromelf --bin -o build\lodka_LPC1768.bin build\lodka.axf
-".\build\lodka.axf" - 0 Error(s), 0 Warning(s).
+".\build\lodka.axf" - 0 Error(s), 1 Warning(s).
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

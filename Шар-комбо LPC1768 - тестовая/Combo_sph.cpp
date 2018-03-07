@@ -107,6 +107,10 @@ int main()
 		
 		SysTick_Config(SystemCoreClock/20000);	//20 kHz, 50 us
 		SysTickStop();
+		Wheel.Stop();
+		Wheel.Pid.Reset_on_zero();
+		Rotor.Stop();
+		Rotor.Pid.Reset_on_zero();
 		//NVIC_EnableIRQ(SysTick_IRQn);
 		NVIC_SetPriority(SysTick_IRQn, 1); 
 		
@@ -144,9 +148,21 @@ int main()
 				
 				mpu9250.CalculateGyroData();
 				
+				debug_buffer[debug_buffer_count]=mpu9250.gx; //Wheel.Pid.out;
+				debug_buffer2[debug_buffer_count]=mpu9250.gy;
+				debug_buffer_count++;
+				if(debug_buffer_count==200)
+				{
+					debug_buffer_count=0;
+				}
+				
 				Wheel.omega=0;
 				Rotor.omega=0;
 				Wheel.pulse_enc=0;
+				Wheel.Stop();
+				Wheel.Pid.Reset_on_zero();
+				Rotor.Stop();
+				Rotor.Pid.Reset_on_zero();
 				//Rotor.pulse_enc=0;
 			}
 			else
@@ -157,7 +173,7 @@ int main()
 				//uart.printf("%f\r\n", mpu9250.gz);
 				
 				Rotor.Pid.setted_value = Rotor.Pid.Calculate_feedback_rotor(Wheel.omega, Rotor.omega, mpu9250.gx, mpu9250.gy);
-				uart.printf("%f %f\r\n", Wheel.Pid.setted_value, Rotor.Pid.setted_value);
+				//uart.printf("%f %f\r\n", Wheel.Pid.setted_value, Rotor.Pid.setted_value);
 			}
 			
 				
@@ -168,7 +184,7 @@ int main()
 				uart.printf("V_zero=%f\r\n", V_zero1);
 				wait_us(20);								
 				SysTickStart();
-				wait(2);
+				//wait(2);
 				Wheel.flag_start=0;
 			}
 			

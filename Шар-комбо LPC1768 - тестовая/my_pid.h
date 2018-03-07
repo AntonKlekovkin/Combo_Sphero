@@ -56,7 +56,7 @@ class My_pid
 			k_phi=0;
 			linear_speed=2;
 			dzeta_wheel=2;
-			dzeta_rotor=1;
+			dzeta_rotor=0.1;
 			
 			set_min_max(-50,50);
 		}
@@ -133,7 +133,7 @@ class My_pid
 			
 			//out_torque_rotor=k_phi*( w2 + w3 - 1*dot_phi);
 			
-			out_torque_rotor = (2*K_max/3.1415926)*atan( (w2 + w3 - 1*dot_phi)*dzeta_rotor) ;
+			out_torque_rotor = -(2*K_max/3.1415926)*atan( (w2 - w3 + 0.0*dot_phi)*dzeta_rotor) ;
 				
 			return out_torque_rotor;		
 		

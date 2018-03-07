@@ -888,7 +888,7 @@ namespace Motors
             try
             {
                 k_theta = Convert.ToByte(double.Parse(textBox23.Text) * 10);
-                k_phi = Convert.ToByte(double.Parse(textBox24.Text) * 10);
+                k_phi = Convert.ToByte(double.Parse(textBox24.Text) * 100);
                 linear_speed = Convert.ToByte(double.Parse(textBox25.Text) / 1);
             }
             catch
@@ -921,6 +921,20 @@ namespace Motors
             }
 
             command[0] = 161;
+
+            SendRF(command);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            byte[] command = new byte[6];   //переменная для отправки команд
+
+            for (int i = 0; i < 6; i++)
+            {
+                command[i] = 0;
+            }
+
+            command[0] = 170;
 
             SendRF(command);
         }
