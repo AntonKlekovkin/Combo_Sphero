@@ -163,6 +163,38 @@
           <ExecCommand></ExecCommand>
           <Expression>V_zero1</Expression>
         </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>119</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>29024</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>D:\РђРЅС‚РѕРЅ\РџСЂРѕРµРєС‚С‹\РЁР°СЂ СЃ СЂРµР»СЊСЃРѕР№\Combo_Sphero\РЁР°СЂ-РєРѕРјР±Рѕ LPC1768 - С‚РµСЃС‚РѕРІР°СЏ\my_pid.h</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\lodka\my_pid.h\119</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>78</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>1278</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>D:\РђРЅС‚РѕРЅ\РџСЂРѕРµРєС‚С‹\РЁР°СЂ СЃ СЂРµР»СЊСЃРѕР№\Combo_Sphero\РЁР°СЂ-РєРѕРјР±Рѕ LPC1768 - С‚РµСЃС‚РѕРІР°СЏ\my_uart.h</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\lodka\my_uart.h\78</Expression>
+        </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
@@ -184,6 +216,16 @@
           <count>3</count>
           <WinNumber>1</WinNumber>
           <ItemText>Rotor.Pid.setted_value</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Rotor.Pid</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Wheel.Pid</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

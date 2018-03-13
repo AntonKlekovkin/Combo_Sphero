@@ -24,13 +24,13 @@ void motor2(int, float);
 void sinchr(int32_t, int32_t, uint8_t);
 extern "C" void RIT_IRQHandler();
 
-void Debug_Printf(void);
+//void Debug_Printf(void);
 
 
-float debug_buffer[200];
-float debug_buffer2[200];
-int debug_buffer_count=0;
-int debug_buffer_count2=0;
+extern float debug_buffer[200]={0};
+//float debug_buffer2[200];
+//extern int debug_buffer_count=0;
+//int debug_buffer_count2=0;
 
 
 float V_zero1=2045, V_zero2=2045;
@@ -148,19 +148,19 @@ int main()
 				
 				mpu9250.CalculateGyroData();
 				
-				debug_buffer[debug_buffer_count]=mpu9250.gx; //Wheel.Pid.out;
-				debug_buffer2[debug_buffer_count]=mpu9250.gy;
-				debug_buffer_count++;
-				if(debug_buffer_count==200)
-				{
-					debug_buffer_count=0;
-				}
+//				debug_buffer[debug_buffer_count]=mpu9250.gx; //Wheel.Pid.out;
+//				debug_buffer2[debug_buffer_count]=mpu9250.gy;
+//				debug_buffer_count++;
+//				if(debug_buffer_count==200)
+//				{
+//					debug_buffer_count=0;
+//				}
 				
 				Wheel.omega=0;
 				Rotor.omega=0;
 				Wheel.pulse_enc=0;
-				Wheel.Stop();
-				Wheel.Pid.Reset_on_zero();
+				//Wheel.Stop();
+				//Wheel.Pid.Reset_on_zero();
 				Rotor.Stop();
 				Rotor.Pid.Reset_on_zero();
 				//Rotor.pulse_enc=0;
@@ -174,6 +174,14 @@ int main()
 				
 				Rotor.Pid.setted_value = Rotor.Pid.Calculate_feedback_rotor(Wheel.omega, Rotor.omega, mpu9250.gx, mpu9250.gy);
 				//uart.printf("%f %f\r\n", Wheel.Pid.setted_value, Rotor.Pid.setted_value);
+				
+				debug_buffer[debug_buffer_count]=Rotor.Pid.setted_value; //Wheel.Pid.out;
+				debug_buffer_count++;
+				if(debug_buffer_count==200)
+				{
+					debug_buffer_count=0;
+				}
+		
 			}
 			
 				
@@ -190,7 +198,7 @@ int main()
 			
 			myled4=0;
 	
-			wait_ms(20);
+			wait_ms(50);
 			
 			
 		}
@@ -277,13 +285,13 @@ extern "C" void SysTick_Handler (void)
 		}
 		//Rotor.speed=1-( Rotor.Pid.Calculate_pid(Current2_ma)/100 + (1-Rotor.speed) );
 		
-		debug_buffer[debug_buffer_count]=Current2_ma; //Wheel.Pid.out;
-		debug_buffer2[debug_buffer_count]=(1-Rotor.speed)*100;
-		debug_buffer_count++;
-		if(debug_buffer_count==200)
-		{
-			debug_buffer_count=0;
-		}
+//		debug_buffer[debug_buffer_count]=Current2_ma; //Wheel.Pid.out;
+//		debug_buffer2[debug_buffer_count]=(1-Rotor.speed)*100;
+//		debug_buffer_count++;
+//		if(debug_buffer_count==200)
+//		{
+//			debug_buffer_count=0;
+//		}
 				
 		i2=0;
 	}	
@@ -297,17 +305,3 @@ extern "C" void SysTick_Handler (void)
 	test_p8=0;
 }
 
-void Debug_Printf()
-{
-	int i;
-	float sum=0, average;
-	
-	for(i=0;i<200;i++)
-	{
-		uart.printf("I=%f PID=%f\r\n", debug_buffer[i],debug_buffer2[i] );	
-		sum+=debug_buffer[i];
-	}
-	average=sum/200;
-	uart.printf("V_zero=%f\r\n", V_zero1);	
-	uart.printf("Average Current=%f\r\n", average);	
-}

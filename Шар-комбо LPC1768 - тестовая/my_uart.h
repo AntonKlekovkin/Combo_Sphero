@@ -7,6 +7,11 @@ void obrabotka_bufera(void);
 void SysTickStop(void);
 void SysTickStart(void);
 
+void Debug_Printf(float*);
+
+extern float debug_buffer[200];
+extern int debug_buffer_count=0;
+
 char buffer[NOM];   //bufer for receiving by UART
 extern Serial uart(p9, p10);  // tx, rx
 
@@ -120,7 +125,7 @@ void obrabotka_bufera(void)
                     //uart.putc(0);
                     
 										SysTickStop();
-										//Debug_Printf();
+										Debug_Printf(debug_buffer);
 										Wheel.Stop();
 										Wheel.Pid.Reset_on_zero();
 										Rotor.Stop();
@@ -169,6 +174,11 @@ void obrabotka_bufera(void)
             {							
 							mpu9250.InitMPU(&uart);
 						}
+						else if(buffer[0]==180)  //Transmit feedback coefficients
+            {							
+							Rotor.Pid.coeff=(float)(buffer[1])/100;
+							uart.printf("coeff=%f\r\n",Rotor.Pid.coeff);
+						}
 						
             //clear bufer
             for(i=0;i<NOM;i++)
@@ -179,3 +189,15 @@ void obrabotka_bufera(void)
             flag_uart=0;    //clear flag
         }
 }
+
+void Debug_Printf(float* buffer)
+{
+	int i;
+		
+	for(i=0;i<200;i++)
+	{
+		uart.printf("%f\r\n", &buffer[i] );	
+	}
+
+}
+

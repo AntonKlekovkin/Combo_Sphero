@@ -108,6 +108,8 @@
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.textBox26 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -872,11 +874,31 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(830, 508);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 23);
+            this.button21.TabIndex = 43;
+            this.button21.Text = "Set Coeff";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(810, 482);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(100, 20);
+            this.textBox26.TabIndex = 44;
+            this.textBox26.Text = "1.5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 717);
+            this.Controls.Add(this.textBox26);
+            this.Controls.Add(this.button21);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.textBox25);
@@ -1000,6 +1022,8 @@
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox textBox26;
     }
 }
 

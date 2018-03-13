@@ -939,6 +939,34 @@ namespace Motors
             SendRF(command);
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            byte[] command = new byte[6];   //переменная для отправки команд
+
+            byte coeff;
+
+            try
+            {
+                coeff = Convert.ToByte(double.Parse(textBox26.Text) * 100);
+                
+            }
+            catch
+            {
+                MessageBox.Show("Коэффициенты имеют неверное значение");
+                return;
+            }
+
+            for (int i = 0; i < 6; i++)
+            {
+                command[i] = 0;
+            }
+
+            command[0] = 180;
+            command[1] = coeff;
+
+            SendRF(command);
+        }
+
         
     }
 
