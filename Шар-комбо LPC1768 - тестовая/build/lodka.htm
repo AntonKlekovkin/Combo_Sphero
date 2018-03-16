@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\lodka.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\lodka.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Mar 13 10:25:48 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Mar 15 12:49:27 2018
 <BR><P>
 <H3>Maximum Stack Usage =        472 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -686,7 +686,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obrabotka_bufera()
 </UL>
 
-<P><STRONG><a name="[b5]"></a>obrabotka_bufera()</STRONG> (Thumb, 816 bytes, Stack size 48 bytes, combo_sph.o(.text))
+<P><STRONG><a name="[b5]"></a>obrabotka_bufera()</STRONG> (Thumb, 846 bytes, Stack size 48 bytes, combo_sph.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 464 + Unknown Stack Size
 <LI>Call Chain = obrabotka_bufera() &rArr; MPU9250::InitMPU(mbed::Serial*) &rArr; mbed::Stream::printf(const char*, ...) &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; serial_init &rArr; serial_set_flow_control &rArr; pinmap_pinout &rArr; error &rArr; exit &rArr;  fflush (Cycle)
 </UL>
@@ -748,7 +748,7 @@ Global Symbols
 <P><STRONG><a name="[1e]"></a>TIMER0_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, combo_sph.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_LPC17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[c9]"></a>$Super$$main</STRONG> (Thumb, 728 bytes, Stack size 8 bytes, combo_sph.o(.text))
+<P><STRONG><a name="[c9]"></a>$Super$$main</STRONG> (Thumb, 752 bytes, Stack size 8 bytes, combo_sph.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424 + Unknown Stack Size
 <LI>Call Chain = $Super$$main &rArr; MPU9250::InitMPU(mbed::Serial*) &rArr; mbed::Stream::printf(const char*, ...) &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; serial_init &rArr; serial_set_flow_control &rArr; pinmap_pinout &rArr; error &rArr; exit &rArr;  fflush (Cycle)
 </UL>
@@ -784,7 +784,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1c]"></a>SysTick_Handler</STRONG> (Thumb, 892 bytes, Stack size 80 bytes, combo_sph.o(.text))
+<P><STRONG><a name="[1c]"></a>SysTick_Handler</STRONG> (Thumb, 902 bytes, Stack size 80 bytes, combo_sph.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = SysTick_Handler &rArr; My_motor::Set_direction(int) &rArr; mbed::DigitalOut::operator =(int) &rArr; mbed::DigitalOut::write(int)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;My_motor::Set_direction(int)
@@ -3666,7 +3666,7 @@ Local Symbols
 <LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[66]"></a>__sti___13_Combo_sph_cpp_9503827e</STRONG> (Thumb, 192 bytes, Stack size 8 bytes, combo_sph.o(.text))
+<P><STRONG><a name="[66]"></a>__sti___13_Combo_sph_cpp_9503827e</STRONG> (Thumb, 194 bytes, Stack size 8 bytes, combo_sph.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440 + Unknown Stack Size
 <LI>Call Chain = __sti___13_Combo_sph_cpp_9503827e &rArr; mbed::Serial::Serial(PinName, PinName, const char*) &rArr; mbed::Stream::Stream__sub_object(const char*) &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; serial_init &rArr; serial_set_flow_control &rArr; pinmap_pinout &rArr; error &rArr; exit &rArr;  fflush (Cycle)
 </UL>

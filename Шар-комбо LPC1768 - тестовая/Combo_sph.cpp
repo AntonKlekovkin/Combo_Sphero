@@ -24,6 +24,8 @@ void motor2(int, float);
 void sinchr(int32_t, int32_t, uint8_t);
 extern "C" void RIT_IRQHandler();
 
+extern int timeWait=20;
+	
 //void Debug_Printf(void);
 
 
@@ -134,6 +136,8 @@ int main()
 		t.start();  
 		mpu9250.InitMPU(&uart);
 		
+		timeWait=20;
+		
     while(1) 
     {
 			myled4=1;
@@ -198,7 +202,7 @@ int main()
 			
 			myled4=0;
 	
-			wait_ms(50);
+			wait_ms(timeWait);
 			
 			
 		}

@@ -110,6 +110,8 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.button22 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -892,11 +894,31 @@
             this.textBox26.TabIndex = 44;
             this.textBox26.Text = "1.5";
             // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(810, 564);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(100, 20);
+            this.textBox27.TabIndex = 45;
+            this.textBox27.Text = "20";
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(823, 590);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 46;
+            this.button22.Text = "Set time";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 717);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.textBox27);
             this.Controls.Add(this.textBox26);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button15);
@@ -1024,6 +1046,8 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.Button button22;
     }
 }
 

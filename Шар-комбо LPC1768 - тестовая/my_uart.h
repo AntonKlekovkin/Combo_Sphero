@@ -27,6 +27,8 @@ extern DigitalOut myled1(LED1);
 extern DigitalOut myled3(LED3);
 extern DigitalOut myled4(LED4);
 
+extern int timeWait;
+
 extern MPU9250 mpu9250;
 
 void SysTickStop()
@@ -178,6 +180,11 @@ void obrabotka_bufera(void)
             {							
 							Rotor.Pid.coeff=(float)(buffer[1])/100;
 							uart.printf("coeff=%f\r\n",Rotor.Pid.coeff);
+						}
+						else if(buffer[0]==190)  //Transmit feedback coefficients
+            {							
+							timeWait=buffer[1];
+							uart.printf("timeWait=%d\r\n",timeWait);
 						}
 						
             //clear bufer

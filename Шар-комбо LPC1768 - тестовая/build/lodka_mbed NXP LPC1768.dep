@@ -1,5 +1,5 @@
 Dependencies for Project 'lodka', Target 'mbed NXP LPC1768': (DO NOT MODIFY !)
-F (.\Combo_sph.cpp)(0x5AA68FDC)(--cpp -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I . -I mbed -I mbed/TARGET_LPC1768 -I mbed/TARGET_LPC1768/TARGET_NXP -I mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X -I mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768 -I mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD --gnu --no_rtti -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="524" -D__CORTEX_M3 -DARM_MATH_CM3 -DTARGET_CORTEX_M -DMBED_BUILD_TIMESTAMP="1449727745.98" -DTARGET_LPC176X -DTARGET_NXP -DTARGET_MBED_LPC1768 -D__MBED__="1" -DTARGET_LPC1768 -DTARGET_M3 -DTOOLCHAIN_ARM -DTOOLCHAIN_ARM_STD -D__ASSERT_MSG-o .\build\combo_sph.o --omf_browse .\build\combo_sph.crf --depend .\build\combo_sph.d)
+F (.\Combo_sph.cpp)(0x5AAA3396)(--cpp -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I . -I mbed -I mbed/TARGET_LPC1768 -I mbed/TARGET_LPC1768/TARGET_NXP -I mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X -I mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768 -I mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD --gnu --no_rtti -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="524" -D__CORTEX_M3 -DARM_MATH_CM3 -DTARGET_CORTEX_M -DMBED_BUILD_TIMESTAMP="1449727745.98" -DTARGET_LPC176X -DTARGET_NXP -DTARGET_MBED_LPC1768 -D__MBED__="1" -DTARGET_LPC1768 -DTARGET_M3 -DTOOLCHAIN_ARM -DTOOLCHAIN_ARM_STD -D__ASSERT_MSG-o .\build\combo_sph.o --omf_browse .\build\combo_sph.crf --depend .\build\combo_sph.d)
 I (mbed\mbed.h)(0x5668DEC2)
 I (mbed\platform.h)(0x5668DEC2)
 I (mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h)(0x5668DEC4)
@@ -90,7 +90,7 @@ I (mbed\pinmap.h)(0x5668DEC2)
 I (my_timer.h)(0x5A33C806)
 I (my_pid.h)(0x5AA76EEB)
 I (my_motor.h)(0x5A5D8F5C)
-I (my_uart.h)(0x5AA69EFA)
+I (my_uart.h)(0x5AAA3377)
 I (my_init.h)(0x5A9E7DA9)
 F (.\my_adc.h)(0x5A3504C3)()
 F (.\my_timer.h)(0x5A33C806)()
@@ -269,4 +269,4 @@ I (mbed\sleep_api.h)(0x5668DEC2)
 I (mbed\rtc_time.h)(0x5668DEC2)
 I (MPU9250.h)(0x5A4383C3)
 F (.\my_init.h)(0x5A9E7DA9)()
-F (.\my_uart.h)(0x5AA69EFA)()
+F (.\my_uart.h)(0x5AAA3377)()
